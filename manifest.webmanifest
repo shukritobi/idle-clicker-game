@@ -1,0 +1,18 @@
+{
+  "name": "dot. | a little idle universe",
+  "short_name": "dot.",
+  "description": "Tap. Build. Grow. Repeat.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f8fc",
+  "theme_color": "#f7f8fc",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
