@@ -24,3 +24,11 @@
 @keyframes memeBounce{0%{transform:scale(.65)}80%{transform:scale(1.1)}100%{transform:scale(1)}}
 @media(max-width:500px){.meme-moment{top:90px;width:min(226px,calc(100vw - 44px))}.meme-title{font-size:17px}.meme-inner{padding:9px 11px 11px}.status{display:inline-flex!important;font-size:8px!important;letter-spacing:.7px!important;margin-right:0!important;align-items:center}.header-right{gap:6px}.icon-btn{width:36px;height:36px}}
 @media(prefers-reduced-motion:reduce){.meme-moment,.meme-moment.visible{transition:none;transform:translateX(-50%)!important}.meme-moment.visible .meme-inner{animation:none!important}}
+
+/* Streak heat: gradually makes the main orb more alive, without adding UI clutter. */
+.orb.heat:not(.fever){box-shadow:inset -10px -14px 30px #4833b257,0 18px 63px #b388ff7a,0 0 0 11px #b8a5fc2b}
+.orb.legend:not(.fever){background:radial-gradient(circle at 28% 19%,#ffd0ed,#c786f7 31%,#935ee8 72%,#6046bb);box-shadow:0 0 0 10px #e4a7f833,0 20px 78px #c36cdb81}
+.orb.cosmic:not(.fever){background:radial-gradient(circle at 28% 18%,#eaffee,#76e3da 30%,#7777ec 70%,#594fc3);box-shadow:0 0 0 11px #b6ffee55,0 21px 92px #6dcac7a1;animation:orbPulse 1.55s ease-in-out infinite alternate}
+.track-fill.combo-gold{background:linear-gradient(90deg,#d697ef,#ffd07d,#f9a0c7)}
+@keyframes orbPulse{0%{filter:hue-rotate(0deg)}100%{filter:hue-rotate(24deg) brightness(1.12)}}
+@media(prefers-reduced-motion:reduce){.orb.cosmic:not(.fever){animation:none}}
