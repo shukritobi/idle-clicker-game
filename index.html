@@ -15,7 +15,7 @@
 <div class="app">
 <header class="header">
 <a class="logo" href="./" aria-label="dot home"><span class="logo-mark">✳</span>dot<span class="logo-period">.</span></a>
-<div class="header-right"><span class="status"><span class="status-light"></span> AUTO SAVED</span><button class="icon-btn" id="musicToggle" title="Ambient music" aria-label="Toggle ambient music">♫</button><button class="icon-btn" id="soundToggle" title="Sound effects" aria-label="Toggle sound effects">♪</button></div>
+<div class="header-right"><span class="status"><span class="status-light"></span><span id="saveState">AUTO SAVE</span></span><button class="icon-btn" id="musicToggle" title="Ambient music" aria-label="Toggle ambient music">♫</button><button class="icon-btn" id="soundToggle" title="Sound effects" aria-label="Toggle sound effects">♪</button></div>
 </header>
 <main class="layout">
 <section class="left-panel">
@@ -41,13 +41,13 @@
 </div>
 <div id="labPanel" class="tab-panel"><div class="section-help">Small upgrades. Big differences.</div><div id="upgrades" class="cards"></div></div>
 <div id="goalsPanel" class="tab-panel"><div id="dailyCard"></div><div class="section-row"><span class="eyebrow">MILESTONES</span><span id="goalCount" class="text-light"></span></div><div id="achievements" class="goal-grid"></div></div>
-<div id="morePanel" class="tab-panel"><div id="prestigeCard"></div><div class="section-row"><span class="eyebrow">YOUR JOURNEY</span></div><div id="stats" class="stats-grid"></div><div class="section-row"><span class="eyebrow">PREFERENCES & SAVE</span></div><div class="settings-list"><button id="toggleParticles" class="setting-row">Visual effects <strong>ON</strong></button><button id="exportSave" class="setting-row">Export save <span>↗</span></button><button id="importSave" class="setting-row">Import save <span>↗</span></button><button id="resetSave" class="setting-row danger">Reset progress <span>↗</span></button><input type="file" id="importInput" accept="application/json,.json" hidden></div><p class="footer-note">Made for little moments. Progress stays on your device. ♥</p></div>
+<div id="morePanel" class="tab-panel"><div id="prestigeCard"></div><div class="section-row"><span class="eyebrow">YOUR JOURNEY</span></div><div id="stats" class="stats-grid"></div><div class="section-row"><span class="eyebrow">PREFERENCES & SAVE</span></div><div class="settings-list"><button id="toggleParticles" class="setting-row">Visual effects <strong>ON</strong></button><button id="toggleMemes" class="setting-row">Meme reactions <strong>ON</strong></button><button id="exportSave" class="setting-row">Export save <span>↗</span></button><button id="importSave" class="setting-row">Import save <span>↗</span></button><button id="resetSave" class="setting-row danger">Reset progress <span>↗</span></button><input type="file" id="importInput" accept="application/json,.json" hidden></div><p class="footer-note">Made for little moments. Progress stays on your device. ♥</p></div>
 </section>
 </main>
 <footer class="footer"><span>dot. / the tiny universe</span><span>slow down. get big.</span></footer>
 </div>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-card"><span class="modal-symbol" id="modalSymbol">✦</span><h2 id="modalTitle">Ready?</h2><p id="modalText"></p><div class="modal-actions"><button id="modalCancel" class="btn-secondary">Not yet</button><button id="modalConfirm" class="btn-primary">Continue</button></div></div></div>
-<script src="./game.js" defer></script>
+<script src="./meme.js" defer></script><script src="./game.js" defer></script>
 </body>
 </html>
