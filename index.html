@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f7f8fc">
+<meta name="description" content="A tiny tap with a very big universe. A satisfying minimalist idle game.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="stylesheet" href="./style.css">
+<title>dot. · a little idle game</title>
+</head>
+<body>
+<div class="app">
+<header class="header">
+<a class="logo" href="./" aria-label="dot home"><span class="logo-mark">✳</span>dot<span class="logo-period">.</span></a>
+<div class="header-right"><span class="status"><span class="status-light"></span> AUTO SAVED</span><button class="icon-btn" id="musicToggle" title="Ambient music" aria-label="Toggle ambient music">♫</button><button class="icon-btn" id="soundToggle" title="Sound effects" aria-label="Toggle sound effects">♪</button></div>
+</header>
+<main class="layout">
+<section class="left-panel">
+<div class="top-meta"><span class="eyebrow" id="eraLabel">CHAPTER 01 · THE BEGINNING</span><span class="little-tag" id="starLabel">✦ 0 stars</span></div>
+<div class="total-wrap"><div class="total-label">YOUR ENERGY</div><div class="total" id="coins">0</div><div class="income-line"><span class="mini-orb"></span><strong id="income">0</strong> <span>/ second</span> <span class="income-divider">·</span> <strong id="tapValue">+1</strong><span> / tap</span></div></div>
+<div class="world">
+<div class="world-grid"></div><div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="orbit orbit-3"></div>
+<div class="world-stars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<button id="orb" class="orb" aria-label="Tap to collect energy"><span class="orb-shine"></span><span class="orb-center"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M56 5 20 54h27L40 95l40-52H52z" fill="currentColor"/></svg></span><span class="orb-word">TAP ME</span></button>
+<div id="particles" class="particles" aria-hidden="true"></div>
+<button id="meteor" class="meteor hidden" aria-label="Collect falling star" title="Collect bonus energy">✦</button>
+</div>
+<div class="combo-block"><div class="combo-top"><span id="comboLabel">Every tap counts.</span><span id="comboAmount">0 combo</span></div><div class="track"><div id="comboFill" class="track-fill"></div></div></div>
+<button class="overdrive" id="overdrive"><span class="overdrive-icon">⚡</span><span class="overdrive-name">OVERDRIVE</span><span class="overdrive-desc" id="overdriveState">3× power · 20 sec</span><span class="overdrive-arrow">↗</span></button>
+<p class="micro-hint">Tap. Build. Grow. Repeat. ✨</p>
+</section>
+<section class="right-panel">
+<div class="shop-header"><div><div class="eyebrow">THE WORKSHOP</div><h1 id="sectionTitle">Make it grow.</h1></div><div id="sectionIcon" class="section-icon">↗</div></div>
+<nav class="tabs" aria-label="Game sections"><button class="tab active" data-tab="build">Build <span class="tab-dot"></span></button><button class="tab" data-tab="lab">Lab</button><button class="tab" data-tab="goals">Goals</button><button class="tab" data-tab="more">More</button></nav>
+<div id="buildPanel" class="tab-panel active">
+<div class="shop-tools"><span class="eyebrow">AUTOMATIC ENERGY</span><div class="quantity" aria-label="Purchase quantity"><button data-qty="1" class="selected">×1</button><button data-qty="10">×10</button><button data-qty="max">MAX</button></div></div>
+<div id="buildings" class="cards"></div><div class="end-note" id="buildingsNote">New things appear as you grow ✦</div>
+</div>
+<div id="labPanel" class="tab-panel"><div class="section-help">Small upgrades. Big differences.</div><div id="upgrades" class="cards"></div></div>
+<div id="goalsPanel" class="tab-panel"><div id="dailyCard"></div><div class="section-row"><span class="eyebrow">MILESTONES</span><span id="goalCount" class="text-light"></span></div><div id="achievements" class="goal-grid"></div></div>
+<div id="morePanel" class="tab-panel"><div id="prestigeCard"></div><div class="section-row"><span class="eyebrow">YOUR JOURNEY</span></div><div id="stats" class="stats-grid"></div><div class="section-row"><span class="eyebrow">PREFERENCES & SAVE</span></div><div class="settings-list"><button id="toggleParticles" class="setting-row">Visual effects <strong>ON</strong></button><button id="exportSave" class="setting-row">Export save <span>↗</span></button><button id="importSave" class="setting-row">Import save <span>↗</span></button><button id="resetSave" class="setting-row danger">Reset progress <span>↗</span></button><input type="file" id="importInput" accept="application/json,.json" hidden></div><p class="footer-note">Made for little moments. Progress stays on your device. ♥</p></div>
+</section>
+</main>
+<footer class="footer"><span>dot. / the tiny universe</span><span>slow down. get big.</span></footer>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-card"><span class="modal-symbol" id="modalSymbol">✦</span><h2 id="modalTitle">Ready?</h2><p id="modalText"></p><div class="modal-actions"><button id="modalCancel" class="btn-secondary">Not yet</button><button id="modalConfirm" class="btn-primary">Continue</button></div></div></div>
+<script src="./game.js" defer></script>
+</body>
+</html>
