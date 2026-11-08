@@ -14,7 +14,7 @@ achievement:["success.ogg",.28],unlock:["success.ogg",.32],
 crit:["metal.ogg",.10],daily:["success.ogg",.3],
 meteor:["coins.ogg",.35],boost:["explosion.ogg",.22],
 prestige:["explosion.ogg",.28],
-streak10:["horn.ogg",.30],streak50:["metal.ogg",.30],
+streak50:["metal.ogg",.30],
 streak100:["explosion.ogg",.34],streak250:["explosion.ogg",.34],
 streak500:["explosion.ogg",.38]
 };
